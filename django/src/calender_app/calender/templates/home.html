@@ -19,14 +19,14 @@
 
         <tr class="table-secondary">
             <td class="striker"><a href="{% url 'edit' things.id %}">{{things.item}}</a></td>
-            <td><a href="{% url 'uncross' things.id %}">Crossed Off</a></td>
+            <td><a href="{% url 'uncross' things.id %}">Uncross</a></td>
             <td><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
         </tr>
 
         {%else%}
             <tr">
             <td><a href="{% url 'edit' things.id %}">{{things.item}}</a></td>
-            <td><a href="{% url 'cross_off' things.id %}">Uncrossed</a></td>
+            <td><a href="{% url 'cross_off' things.id %}">Cross off</a></td>
             <td><center><a href="{% url 'delete' things.id %}">Delete</a></center></td>
         </tr>
         {%endif%}
